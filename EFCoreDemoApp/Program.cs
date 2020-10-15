@@ -1,5 +1,6 @@
 ﻿using System;
 using Common;
+using EFCoreDemoApp.Repositries;
 using Service;
 
 namespace EFCoreDemoApp
@@ -12,7 +13,7 @@ namespace EFCoreDemoApp
             var _context = new EmployeeContext("Persist Security Info = false; Integrated Security = true; Initial Catalog = devDatabase; server = HAMZAPC");
             //var service = new EmployeeService(_context);
             var genService = new EmployeeService();
-          //  EmployeeRepositry employeeRepositry = new EmployeeRepositry(_context);
+            EmployeeRepositry employeeRepositry = new EmployeeRepositry(_context);
             var existingEmployee = new Employee();
 
             #region GetById
@@ -62,20 +63,20 @@ namespace EFCoreDemoApp
             }
             #endregion
 
-            //Console.WriteLine("Duplicate Records");
-            //var duplicateRows = employeeRepositry.DuplicateRecords();
-            //if (duplicateRows.Count > 0)
-            //{
-            //    foreach (var dr in duplicateRows)
-            //    {
-            //        Console.WriteLine($"Welcome " + dr.Name + " Your Salary is : " + dr.Salary + " \tCount : " + dr.count);
-            //    }
-            //}
-            //else
-            //{
-            //    Console.WriteLine("No Duplicate Records Found");
-            //}
-           
+            Console.WriteLine("Duplicate Records");
+            var duplicateRows = employeeRepositry.DuplicateRecords();
+            if (duplicateRows.Count > 0)
+            {
+                foreach (var dr in duplicateRows)
+                {
+                    Console.WriteLine($"Welcome " + dr.Name + " Your Salary is : " + dr.Salary + " \tCount : " + dr.count);
+                }
+            }
+            else
+            {
+                Console.WriteLine("No Duplicate Records Found");
+            }
+
         }
     }
 }
