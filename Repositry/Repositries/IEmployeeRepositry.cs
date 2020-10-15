@@ -1,4 +1,4 @@
-﻿using EFCoreDemoApp.Models;
+﻿using Common;
 using System.Collections.Generic;
 
 namespace EFCoreDemoApp.Repositries

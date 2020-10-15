@@ -1,10 +1,6 @@
-﻿using EFCoreDemoApp.Models;
-using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Microsoft.EntityFrameworkCore;
 
-namespace EFCoreDemoApp
+namespace Common
 {
     public class EmployeeContext :  DbContext
     {

@@ -1,21 +1,24 @@
-﻿using Dapper;
-using EFCoreDemoApp.Models;
+﻿using Common;
+using Dapper;
+
 using Microsoft.Data.SqlClient;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 
 namespace EFCoreDemoApp.Repositries
 {
     public class EmployeeRepositry : GenericRepository<Employee>, IEmployeeRepositry //IEmployeeRepositry
     {
+        private readonly string _context = "Persist Security Info = false; Integrated Security = true; Initial Catalog = devDatabase; server = HAMZAPC";
+
         public EmployeeRepositry(EmployeeContext context) : base(context)
         {
         }
-        private readonly string _context = "Persist Security Info = false; Integrated Security = true; Initial Catalog = devDatabase; server = HAMZAPC";
-
+       
         /// <summary>
-        ///  Using Dapper with SP
+        /// Using Dapper with SP
         /// Giving connection as connection String
         /// Exposing connection.query with dynamic or specific return type with SP Name
         /// Convert it to required data type as .toList
@@ -26,7 +29,7 @@ namespace EFCoreDemoApp.Repositries
         public List<ResultDTO> DuplicateRecords()
         {
             List<ResultDTO> results = new List<ResultDTO>();
-            using (var connection = new SqlConnection(_context))
+            using (var connection = new System.Data.SqlClient.SqlConnection(_context))
             {
                 connection.Open();
                 results = connection.Query<ResultDTO>("_SPDuplicateRecords",

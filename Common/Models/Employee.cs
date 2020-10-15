@@ -1,5 +1,5 @@
 ﻿
-namespace EFCoreDemoApp.Models
+namespace Common
 {
     public class Employee
     {

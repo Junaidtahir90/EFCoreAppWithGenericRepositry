@@ -1,9 +1,9 @@
-﻿using EFCoreDemoApp.Models;
+﻿using Common;
 using EFCoreDemoApp.Repositries;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace EFCoreDemoApp.Services
+namespace Service
 {
     public class EmployeeService : IEmployeeService
     {
