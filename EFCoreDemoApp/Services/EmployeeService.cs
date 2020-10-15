@@ -27,7 +27,7 @@ namespace EFCoreDemoApp.Services
         }
         public Employee Create(Employee employee)
         {
-            var newEmplyee = _genericRepository.Insert(employee);
+            var newEmplyee = _genericRepository.Create(employee);
             return newEmplyee;
         }
         public Employee GetById(long id)

@@ -21,7 +21,6 @@ namespace EFCoreDemoApp.Repositries
             entity = _context.Set<T>();
         }
 
-
         /// <summary>
         /// Constructor of Generic Repositry with param
         /// Inject the EmployeeContext in GenericRepository with param
@@ -57,7 +56,7 @@ namespace EFCoreDemoApp.Repositries
         /// </summary>
         /// <param>Dynamic <T> (entity) which are needs to created</param>
         /// <returns>Dynamic (Model Type) respect to dynamic(model type) </returns>
-        public T Insert(T obj)
+        public T Create(T obj)
         {
             entity.Add(obj);
             Save();

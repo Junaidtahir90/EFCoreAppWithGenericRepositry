@@ -6,7 +6,7 @@ namespace EFCoreDemoApp.Repositries
     {
         IEnumerable<T> GetAll();
         T GetById(long id);
-        T Insert(T obj);
+        T Create(T obj);
         T Update(T obj);
         string Delete(long id);
         void Save();
