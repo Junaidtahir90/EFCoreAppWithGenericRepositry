@@ -1,10 +1,7 @@
 ﻿using EFCoreDemoApp.Models;
 using EFCoreDemoApp.Repositries;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace EFCoreDemoApp.Services
 {
@@ -18,23 +15,12 @@ namespace EFCoreDemoApp.Services
             _genericRepository = new GenericRepository<Employee>();
         }
 
-        //public EmployeeService(IGenericRepository<Employee> repo)
-        //{
-        //    _genericRepository = repo;
-        //}
         public EmployeeService(EmployeeContext employeeContext)
         {
             _employeeContext = employeeContext;
            
         }
-        //public Employee Get(long id)
-        //{
-        //    return _employeeContext.Employees.FirstOrDefault(emp => emp.Id == (id));
-        //}
-        //public List<Employee> GetAll()
-        //{
-        //    return _employeeContext.Employees.ToList();
-        //}
+     
         public List<Employee> Get()
         {
             return _genericRepository.GetAll().ToList();
@@ -52,18 +38,7 @@ namespace EFCoreDemoApp.Services
         public Employee Update(Employee employee)
         {
             Employee updEmplyee = new Employee();
-            //var existingEmployee = _employeeContext.Employees.FirstOrDefault(emp => emp.Id == employee.Id);
-            //if (existingEmployee != null)
-            //{
-            //    _employeeContext.Update(employee);
-            //    _employeeContext.SaveChanges();
-            //    return employee;
-            //}
-            //else
-            //{
-            //    return updEmplyee;
-            //}
-            updEmplyee= _genericRepository.Update(employee);
+            updEmplyee = _genericRepository.Update(employee);
             return updEmplyee;
         }
 
@@ -71,8 +46,5 @@ namespace EFCoreDemoApp.Services
         {
             return _genericRepository.Delete(id);
         }
-     
-
-      
     }
 }

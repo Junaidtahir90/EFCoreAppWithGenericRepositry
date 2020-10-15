@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ayaz\\source\\repos\\EFCoreDemoApp\\EFCoreDemoApp\\EFCoreDemoApp.csproj": {}
+    "E:\\Projects\\EFCoreDemoApp\\EFCoreDemoApp\\EFCoreDemoApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ayaz\\source\\repos\\EFCoreDemoApp\\EFCoreDemoApp\\EFCoreDemoApp.csproj": {
+    "E:\\Projects\\EFCoreDemoApp\\EFCoreDemoApp\\EFCoreDemoApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ayaz\\source\\repos\\EFCoreDemoApp\\EFCoreDemoApp\\EFCoreDemoApp.csproj",
+        "projectUniqueName": "E:\\Projects\\EFCoreDemoApp\\EFCoreDemoApp\\EFCoreDemoApp.csproj",
         "projectName": "EFCoreDemoApp",
-        "projectPath": "C:\\Users\\ayaz\\source\\repos\\EFCoreDemoApp\\EFCoreDemoApp\\EFCoreDemoApp.csproj",
+        "projectPath": "E:\\Projects\\EFCoreDemoApp\\EFCoreDemoApp\\EFCoreDemoApp.csproj",
         "packagesPath": "C:\\Users\\ayaz\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ayaz\\source\\repos\\EFCoreDemoApp\\EFCoreDemoApp\\obj\\",
+        "outputPath": "E:\\Projects\\EFCoreDemoApp\\EFCoreDemoApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

@@ -10,10 +10,7 @@ namespace EFCoreDemoApp
        
         static void Main(string[] args)
         {
-            //var connectionString = "Persist Security Info=false; Integrated Security=true; Initial Catalog=devDatabase; server=HAMZAPC";
             var _context = new EmployeeContext("Persist Security Info = false; Integrated Security = true; Initial Catalog = devDatabase; server = HAMZAPC");
-            //string connectionString = "Data Source=HAMZAPC;Initial Catalog=devDatabase;Integrated Security=True";
-             
             var service = new EmployeeService(_context);
             var genService = new EmployeeService();
             EmployeeRepositry employeeRepositry = new EmployeeRepositry(_context);
@@ -32,7 +29,6 @@ namespace EFCoreDemoApp
             Employee employeeDTO = genService.Create(newEmployee);
 
             Console.WriteLine("New Employee is ");
-            //  foreach (var emp in employeesList)
             {
                 Console.WriteLine($"Welcome " + employeeDTO.Name + " Your Salary is : " + employeeDTO.Salary);
             }
@@ -40,23 +36,19 @@ namespace EFCoreDemoApp
 
             #region Update Employee
             existingEmployee = genService.GetById(4);
-            // Employee newEmployee = new Employee();
             existingEmployee.Name = "Murphy";
             existingEmployee.Salary = 45000;
             Employee updatedEmployee = genService.Update(existingEmployee);
             Console.WriteLine("Updated Employee is ");
-            //  foreach (var emp in employeesList)
             {
                 Console.WriteLine($"Welcome " + updatedEmployee.Name + " Your Salary is : " + updatedEmployee.Salary);
             }
             #endregion
 
             #region Delete Employee
-            // existingEmployee = service.Get(8);
             int id = 8;
             //string Name = "Mareena";
             var result = genService.Delete(id);
-            // Console.WriteLine("Deleted Record");
             {
                 Console.WriteLine(result);
             }

@@ -1,23 +1,16 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace EFCoreDemoApp.Repositries
 {
     public class GenericRepository<T> : IGenericRepository<T> where T : class
     {
-         //string _connection = "Persist Security Info = false; Integrated Security = true; Initial Catalog = devDatabase; server = HAMZAPC";
-        //var _context = new EmployeeContext(_connection);
         public EmployeeContext _context = new EmployeeContext("Persist Security Info = false; Integrated Security = true; Initial Catalog = devDatabase; server = HAMZAPC");
-
         private DbSet<T> entity = null;
-       // var _context = new EmployeeContext("Persist Security Info = false; Integrated Security = true; Initial Catalog = devDatabase; server = HAMZAPC");
 
         public GenericRepository()
         {
-            //this._context = _context;
             entity = _context.Set<T>();
         }
 
@@ -34,7 +27,6 @@ namespace EFCoreDemoApp.Repositries
 
         public T GetById(long id)
         {
-            //return  _context.Set<T>().FindAsync(id);
             return entity.Find(id);
         }
 
@@ -43,7 +35,6 @@ namespace EFCoreDemoApp.Repositries
             entity.Add(obj);
             Save();
             return obj;
-            //return newObject;
         }
 
         public T Update(T obj)
@@ -58,7 +49,7 @@ namespace EFCoreDemoApp.Repositries
         {
 
             T existing = entity.Find(id);
-            if(existing != null)
+            if (existing != null)
             {
                 entity.Remove(existing);
                 Save();
@@ -68,7 +59,6 @@ namespace EFCoreDemoApp.Repositries
             {
                 return "Record Not Found/Deleted";
             }
-           
         }
 
         public void Save()

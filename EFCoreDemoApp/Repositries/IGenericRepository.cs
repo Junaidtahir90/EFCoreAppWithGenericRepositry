@@ -1,6 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations.Operations;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace EFCoreDemoApp.Repositries
 {
