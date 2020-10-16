@@ -1,11 +1,11 @@
 ﻿using System;
-using Common;
 using Repositry.Repositries;
 using Service;
+using Utilities;
 
 namespace EFCoreDemoApp
 {
-    class Program
+    public class Program
     {
        
         static void Main(string[] args)

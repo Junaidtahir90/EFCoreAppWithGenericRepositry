@@ -1,5 +1,6 @@
-﻿using Common;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using Utilities;
+using Utilities.DTO;
 
 namespace Repositry.Repositries
 {

@@ -1,8 +1,9 @@
-﻿using Common;
-using Dapper;
+﻿using Dapper;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using Utilities;
+using Utilities.DTO;
 
 namespace Repositry.Repositries
 {

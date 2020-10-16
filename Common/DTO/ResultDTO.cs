@@ -1,5 +1,5 @@
 ﻿
-namespace Common
+namespace Common.DTO
 {
     public class ResultDTO
     {

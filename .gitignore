@@ -280,3 +280,4 @@ bin
 .vs/EFCoreDemoApp/v16/.suo
 *.v2
 *.txt
+*.cache
