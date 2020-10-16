@@ -1,5 +1,5 @@
 ﻿using Common;
-using EFCoreDemoApp.Repositries;
+using Repositry.Repositries;
 using System.Collections.Generic;
 using System.Linq;
 

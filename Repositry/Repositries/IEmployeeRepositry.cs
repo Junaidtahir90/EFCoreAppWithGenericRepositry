@@ -1,7 +1,7 @@
 ﻿using Common;
 using System.Collections.Generic;
 
-namespace EFCoreDemoApp.Repositries
+namespace Repositry.Repositries
 {
     public interface IEmployeeRepositry : IGenericRepository<Employee>
     {

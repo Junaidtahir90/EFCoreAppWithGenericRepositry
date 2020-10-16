@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace EFCoreDemoApp.Repositries
+namespace Repositry.Repositries
 {
     public interface IGenericRepository<T> where T : class
     {

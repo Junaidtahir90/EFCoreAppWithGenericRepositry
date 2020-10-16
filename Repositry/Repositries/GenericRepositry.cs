@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace EFCoreDemoApp.Repositries
+namespace Repositry.Repositries
 {
     public class GenericRepository<T> : IGenericRepository<T> where T : class
     {

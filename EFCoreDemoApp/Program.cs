@@ -1,6 +1,6 @@
 ﻿using System;
 using Common;
-using EFCoreDemoApp.Repositries;
+using Repositry.Repositries;
 using Service;
 
 namespace EFCoreDemoApp
