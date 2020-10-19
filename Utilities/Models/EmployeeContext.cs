@@ -1,14 +1,18 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 
 namespace Utilities
 {
-    public class EmployeeContext :  DbContext
+    public class EmployeeContext : DbContext
     {
         private readonly string _connectionString;
-       
-        public EmployeeContext(string connectionString)
+        private readonly IConfiguration _configuration;
+
+        public EmployeeContext(string configuration)
         {
-            _connectionString = connectionString;
+            //s_configuration = configuration;
+            //connectionString = _configuration.GetConnectionString("DBConnection");
+            _connectionString = configuration;
         }
 
         public DbSet<Employee> Employees { get; set; }
@@ -17,6 +21,11 @@ namespace Utilities
         {
             optionsBuilder.UseSqlServer(_connectionString);
             //base.OnConfiguring(optionsBuilder);
+        }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
         }
     }
 }

@@ -1,4 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using AspNetCore.ServiceRegistration.Dynamic;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Repositry.Repositries;
 using Utilities;
@@ -7,17 +9,22 @@ namespace EFCoreDemoApp
 {
     public static class DependencyInjection
     {
-        private static string _connString = "Persist Security Info = false; Integrated Security = true; Initial Catalog = devDatabase; server = HAMZAPC";
+        public static IConfiguration Configuration { get; }
         public static IServiceCollection AddRepository(this IServiceCollection services)
         {
-           // services.AddTransient<IGenericRepository<T>, GenericRepository<T>>();
-           // services.AddTransient<IEmployeeRepositry, EmployeeRepositry>();
+           // services.AddDbContextPool<EmployeeContext>(context => context.UseSqlServer(configuration.GetConnectionString("DBConnection")));
             services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
-            
-            // services.AddTransient<IUnitOfWork, UnitOfWork>();
+          
+            #region Register Services
+            services.AddServicesOfType<IScopedService>();
+            services.AddServicesWithAttributeOfType<ScopedServiceAttribute>();
+            #endregion
 
-            services.AddDbContext<EmployeeContext>(opt => opt
-                .UseSqlServer(_connString));
+            // services.AddDbContextPool<EmployeeContext>(context => context.UseSqlServer(config.GetConnectionString("DBConnection")));
+            //services.AddDbContext<EmployeeContext>(opt => opt.UseSqlServer(config.GetConnectionString("DBConnection")));
+            services.AddDbContext<EmployeeContext>(options => options.UseSqlServer(Configuration["ConnectionStrings:DefaultConnection"]));
+            //services.AddDbContext<EmployeeContext>(opt => opt.UseSqlServer(config.GetConnectionString("DBConnection")));
+
             return services;
         }
     }

@@ -115,7 +115,6 @@ E:\Projects\EFCoreDemoApp\EFCoreDemoApp\obj\Debug\netcoreapp3.1\EFCoreDemoApp.pd
 E:\Projects\EFCoreDemoApp\EFCoreDemoApp\obj\Debug\netcoreapp3.1\EFCoreDemoApp.genruntimeconfig.cache
 E:\Projects\EFCoreDemoApp\EFCoreDemoApp\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Http.Abstractions.dll
 E:\Projects\EFCoreDemoApp\EFCoreDemoApp\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Http.Features.dll
-E:\Projects\EFCoreDemoApp\EFCoreDemoApp\obj\Debug\netcoreapp3.1\EFCoreDemoApp.csproj.CoreCompileInputs.cache
 E:\Projects\EFCoreDemoApp\EFCoreDemoApp\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Hosting.dll
 E:\Projects\EFCoreDemoApp\EFCoreDemoApp\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Hosting.Abstractions.dll
 E:\Projects\EFCoreDemoApp\EFCoreDemoApp\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Hosting.Server.Abstractions.dll
@@ -132,3 +131,6 @@ E:\Projects\EFCoreDemoApp\EFCoreDemoApp\bin\Debug\netcoreapp3.1\Microsoft.Extens
 E:\Projects\EFCoreDemoApp\EFCoreDemoApp\bin\Debug\netcoreapp3.1\Microsoft.Net.Http.Headers.dll
 E:\Projects\EFCoreDemoApp\EFCoreDemoApp\bin\Debug\netcoreapp3.1\Utilities.dll
 E:\Projects\EFCoreDemoApp\EFCoreDemoApp\bin\Debug\netcoreapp3.1\Utilities.pdb
+E:\Projects\EFCoreDemoApp\EFCoreDemoApp\bin\Debug\netcoreapp3.1\AspNetCore.ServiceRegistration.Dynamic.dll
+E:\Projects\EFCoreDemoApp\EFCoreDemoApp\bin\Debug\netcoreapp3.1\DocumentFormat.OpenXml.dll
+E:\Projects\EFCoreDemoApp\EFCoreDemoApp\bin\Debug\netcoreapp3.1\System.IO.Packaging.dll

@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using System.Collections.Generic;
 using System.Linq;
 using Utilities;
@@ -7,8 +8,11 @@ namespace Repositry.Repositries
 {
     public class GenericRepository<T> : IGenericRepository<T> where T : class
     {
+       // private  IConfiguration _configuration;
         #region variables
-        public EmployeeContext _context = new EmployeeContext("Persist Security Info = false; Integrated Security = true; Initial Catalog = devDatabase; server = HAMZAPC");
+        //public EmployeeContext _context = new EmployeeContext(_configuration);
+       public EmployeeContext _context = new EmployeeContext("Persist Security Info = false; Integrated Security = true; Initial Catalog = devDatabase; server = HAMZAPC");
+
         private DbSet<T> entity = null;
         #endregion
 
